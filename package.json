@@ -1,7 +1,7 @@
 {
   "name": "@pratikpc/aguid",
   "version": "1.0.4",
-  "description": "A Standard-Compliant Globally Unique IDentifier (GUID) generator for Node.js and Browser",
+  "description": "A Standard-Compliant Globally Unique IDentifier (GUID) generator for Node.js and Browser. Fork of guid",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -10,7 +10,6 @@
     "build": "npm run clean && tsc",
     "test": "tape ./test/*.js",
     "coverage": "nyc npm test  | tap-nyc",
-    "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
     "lint": "eslint --cache --max-warnings=0 --fix lib"
   },
   "repository": {
