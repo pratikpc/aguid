@@ -1,13 +1,9 @@
 # aguid
 
-A **G**lobally **U**nique **ID**entifier (GUID) generator in JS.
+[![npm version](https://img.shields.io/npm/v/@pratikpc/aguid)](https://npmjs.com/package/@pratikpc/aguid)
+![Build Status](https://github.com/pratikpc/aguid/actions/workflows/Lint-Format.yml/badge.svg?branch=develop)
 
-[![Node.js Version][node-version-image]][node-version-url]
-[![NPM Version][npm-image]][npm-url]
-[![Build Status](https://travis-ci.org/dwyl/aguid.svg)](https://travis-ci.org/dwyl/aguid)
-[![codecov.io](https://codecov.io/github/dwyl/aguid/coverage.svg?branch=master)](https://codecov.io/github/dwyl/aguid?branch=master)
-[![Code Climate](https://codeclimate.com/github/dwyl/aguid/badges/gpa.svg)](https://codeclimate.com/github/dwyl/aguid)
-[![Dependency Status](https://david-dm.org/dwyl/aguid.svg)](https://david-dm.org/dwyl/aguid)
+A **G**lobally **U**nique **ID**entifier (GUID) generator in JS.
 
 ## Why?
 
@@ -29,7 +25,7 @@ and using that instead. (see usage below)
 
 ## Usage
 
-### Install
+### Install
 
 ```sh
 npm install aguid --save
@@ -38,7 +34,7 @@ npm install aguid --save
 ### Generate a Deterministic GUID given an input
 
 ```javascript
-var aguid = require('aguid');
+var aguid = require('@pratikpc/aguid');
 var guid  = aguid("hello@world.io"); // d828ed52-32ed-4908-86df-df934d3c315d (ALWAYS)
 // use the guid as the key for our record in Redis, ElasticSearch, Postgres, etc.
 
@@ -53,8 +49,16 @@ and in our *specific* use-case we are hashing an email address
 ### Generate a *Random* GUID when invoked without argument
 
 ```javascript
-var aguid = require('aguid');
+var aguid = require('@pratikpc/aguid');
 var guid  = aguid(); // 525be54a-1101-46bf-97d7-2e9c89dd1b16 (*Random*)
+// use for what ever you need a *random* guid
+
+```
+
+### Use as a module with TypeScript/JavaScript
+```javascript
+import aguid from "@pratikpc/aguid";
+const guid  = aguid(); // 525be54a-1101-46bf-97d7-2e9c89dd1b16 (*Random*)
 // use for what ever you need a *random* guid
 
 ```
