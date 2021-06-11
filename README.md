@@ -28,7 +28,7 @@ and using that instead. (see usage below)
 ### Install
 
 ```sh
-npm install aguid --save
+npm install @pratikpc/aguid --save
 ```
 
 ### Generate a Deterministic GUID given an input
