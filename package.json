@@ -1,16 +1,21 @@
 {
-  "name": "aguid",
+  "name": "@pratikpc/aguid",
   "version": "1.0.4",
   "description": "A Standard-Compliant Globally Unique IDentifier (GUID) generator for Node.js and Browser",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
+    "clean": "rimraf dist",
+    "prepare": "npm run build",
+    "build": "npm run clean && tsc",
     "test": "tape ./test/*.js",
     "coverage": "nyc npm test  | tap-nyc",
-    "jshint": "jshint -c .jshintrc --exclude-path .gitignore ."
+    "jshint": "jshint -c .jshintrc --exclude-path .gitignore .",
+    "lint": "eslint --cache --max-warnings=0 --fix lib"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/dwyl/aguid.git"
+    "url": "https://github.com/pratikpc/aguid.git"
   },
   "keywords": [
     "RFC4122",
@@ -19,19 +24,31 @@
     "Node",
     "Browser"
   ],
-  "author": "@nelsonic <contact.nelsonic@gmail.com> (https://github.com/nelsonic)",
+  "author": "Pratik Chowdhury (https://github.com/pratikpc)",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dwyl/aguid/issues"
+    "url": "https://github.com/pratikpc/aguid/issues"
   },
-  "homepage": "https://github.com/dwyl/aguid",
+  "homepage": "https://github.com/pratikpc/aguid",
   "dependencies": {
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "jshint": "^2.13.0",
+    "@types/uuid": "^8.3.0",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb-typescript": "^12.0.0",
+    "eslint-config-prettier": "^6.14.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-promise": "^4.2.1",
     "nyc": "^15.1.0",
+    "prettier": "^2.3.1",
+    "rimraf": "^3.0.2",
     "tap-nyc": "^1.0.3",
-    "tape": "^5.2.2"
+    "tape": "^5.2.2",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
   }
 }
