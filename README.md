@@ -34,7 +34,7 @@ npm install aguid --save
 ### Generate a Deterministic GUID given an input
 
 ```javascript
-var aguid = require('aguid');
+var aguid = require('@pratikpc/aguid');
 var guid  = aguid("hello@world.io"); // d828ed52-32ed-4908-86df-df934d3c315d (ALWAYS)
 // use the guid as the key for our record in Redis, ElasticSearch, Postgres, etc.
 
@@ -49,8 +49,16 @@ and in our *specific* use-case we are hashing an email address
 ### Generate a *Random* GUID when invoked without argument
 
 ```javascript
-var aguid = require('aguid');
+var aguid = require('@pratikpc/aguid');
 var guid  = aguid(); // 525be54a-1101-46bf-97d7-2e9c89dd1b16 (*Random*)
+// use for what ever you need a *random* guid
+
+```
+
+### Use as a module with TypeScript/JavaScript
+```javascript
+import aguid from "@pratikpc/aguid";
+const guid  = aguid(); // 525be54a-1101-46bf-97d7-2e9c89dd1b16 (*Random*)
 // use for what ever you need a *random* guid
 
 ```
