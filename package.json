@@ -1,6 +1,6 @@
 {
   "name": "@pratikpc/aguid",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A Standard-Compliant Globally Unique IDentifier (GUID) generator for Node.js and Browser. Fork of guid",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
